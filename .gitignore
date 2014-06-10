@@ -1,4 +1,7 @@
 .vagrant
 node_modules
 html/js/reconfig.js
+*~
+*/#*
 
+sample.json

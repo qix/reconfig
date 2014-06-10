@@ -1,6 +1,7 @@
 /** @jsx React.DOM */
 
 var Editor = require('./editor');
+var React = require('react');
 
 json = {
   "websites": [
@@ -42,6 +43,7 @@ json = {
     }
   ]
 }
+
 React.renderComponent(
   <Editor config={json} />,
   document.getElementById('editor')

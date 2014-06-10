@@ -1,12 +1,14 @@
 /** @jsx React.DOM */
 
 var React = require('react');
-var Bootstrap = require('react-bootstrap');
-var PanelGroup = Bootstrap.PanelGroup,
+var Bootstrap = require('react-bootstrap'),
+    PanelGroup = Bootstrap.PanelGroup,
     Panel = Bootstrap.Panel,
     Well = Bootstrap.Well,
     Glyphicon = Bootstrap.Glyphicon,
-    Button = Bootstrap.Button;
+    Button = Bootstrap.Button,
+    Input = require('./fields/input'),
+    Select = require('./fields/select');
 
 var Website = React.createClass({
   getInitialState: function() {
@@ -22,7 +24,14 @@ var Website = React.createClass({
     </h3>;
     return <div>
       <Panel header={title}>
-        { /* <input type="text" name="website" /> */ }
+          <Input caption="Domain" />
+          <Select caption="Source">
+            <option value="git">Git repository</option>
+          </Select>
+          <fieldset>
+            <legend>Git options</legend>
+            <Input caption="Repository Path" />
+          </fieldset>
       </Panel>
     </div>;
   }

@@ -9,6 +9,7 @@ var PanelGroup = Bootstrap.PanelGroup,
     Button = Bootstrap.Button;
 
 var Website = require('./website')
+var React = require('react')
 
 var Editor = React.createClass({
   getInitialState: function() {
@@ -48,7 +49,6 @@ var Editor = React.createClass({
 
     return (
       <div>
-        { React.DOM.button({"onClick":function(){}}, "This shoudn't be required.") }
         { websites }
         <Button bsStyle="success" onClick={ this.addWebsite } >Add website</Button>
       </div>

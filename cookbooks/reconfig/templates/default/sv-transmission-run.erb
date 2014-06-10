@@ -1,0 +1,3 @@
+#!/bin/bash
+
+exec transmission-daemon -g /etc/transmission/<%= @options[:name] %> --foreground

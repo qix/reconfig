@@ -1,4 +1,5 @@
 module.exports = {
+  entry: "./editor/main.js",
   module: {
     loaders: [
       { test: /\.css/, loader: "style-loader!css-loader" },
